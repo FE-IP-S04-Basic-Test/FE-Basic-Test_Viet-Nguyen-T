@@ -1,0 +1,5 @@
+Trong HTML documents , chúng ta có thể đặt file css trong thẻ head để các class có thể ăn đc
+các style của css trước khi hiển thị ra giao diện.
+
+Còn file js sẽ bỏ ở cuối body , để khi tương tác với DOM , đảm bảo rằng các element đã tồn tại
+trong DOM , qua đó dễ dàng truy cập đến các element.
