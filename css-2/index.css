@@ -2,18 +2,78 @@
   position: absolute;
   width: max-content;
   left: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
   content: "Tooltip Text";
   color : #fff;
+  padding: 2px;
   background-color:rgb(5, 5, 132);
 }
-.tool-right:hover::before {
+
+.tooltip-right:hover::before {
   position: absolute;
   width: 10px;
   height: 10px;
   background-color: red;
-  left: 100%;
+  left: 0;
+}
+.tooltip-left:hover::after{
+  position: absolute;
+  width: max-content;
+  right: calc(100% + 5px);
+  top: 50%;
+  transform: translateY(-50%);
+  content: "Tooltip Text";
+  color : #fff;
+  padding: 2px;
+  background-color:rgb(5, 5, 132);
 }
 
+.tooltip-left:hover::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  left: 0;
+}
+.tooltip-bottom:hover::after{
+  position: absolute;
+  width: max-content;
+  top: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  content: "Tooltip Text";
+  color : #fff;
+  padding: 2px;
+  background-color:rgb(5, 5, 132);
+}
+
+.tooltip-bottom:hover::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  left: 0;
+}
+.tooltip-top:hover::after{
+  position: absolute;
+  width: max-content;
+  bottom: calc(100% + 5px);
+  left: 50%;
+  transform: translateX(-50%);
+  content: "Tooltip Text";
+  color : #fff;
+  padding: 2px;
+  background-color:rgb(5, 5, 132);
+}
+
+.tooltip-top:hover::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  left: 0;
+}
 .tooltip {
   position: relative;
 }
