@@ -38,36 +38,36 @@
   background-color: #fff;
   border-radius: 16px;
   border: 1px solid #9ea0a8;
-  color : #000;
+  color: #000;
 }
 
 .chip-sm.chip-outline.disabled,
 .chip.chip-outline.disabled {
-  color : rgba(30, 30, 30, 0.40);
+  color: rgba(30, 30, 30, 0.4);
 }
 
 .chip-sm.chip-outline-primary,
 .chip.chip-outline-primary {
   background-color: #fff;
   border-radius: 16px;
-  border: 1px solid #7269EF;
-  color : #7269EF;
+  border: 1px solid #7269ef;
+  color: #7269ef;
 }
 
 .chip-sm.chip-outline.disabled,
 .chip.chip-outline.disabled {
-  color : rgba(30, 30, 30, 0.40);
+  color: rgba(30, 30, 30, 0.4);
 }
 
 .chip-sm.chip-outline-primary.checked::after,
 .chip.chip-outline-primary.checked::after {
-  color : #7269EF;
+  color: #7269ef;
 }
 
 .chip-sm.chip-outline-primary.disabled,
 .chip.chip-outline-primary.disabled {
-  color : rgba(114, 105, 239, 0.40);
-  border: 1px solid rgba(114, 105, 239, 0.40);
+  color: rgba(114, 105, 239, 0.4);
+  border: 1px solid rgba(114, 105, 239, 0.4);
 }
 
 .chip-sm {

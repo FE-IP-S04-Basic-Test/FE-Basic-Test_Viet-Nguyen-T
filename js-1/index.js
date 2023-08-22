@@ -1,10 +1,20 @@
-const addToCart = (product) => {
+const addToCart = (data) => {
   let cart = JSON.parse(localStorage.getItem('cart')) || [];
-  
-  cart.push({
-    ...product,
-    quantity: product.quantity,
-  });
+
+  let product = cart.find(
+    (prd) =>
+      prd.id === data.id &&
+      prd.sugar.id === data.sugar.id &&
+      prd.ice.id === data.sugar.id
+  );
+  if (!product) {
+    cart.push({
+      ...data,
+      quantity: data.quantity,
+    });
+  } else {
+    product.quantity += data.quantity;
+  }
   localStorage.setItem('cart', JSON.stringify(cart));
 };
 
@@ -62,7 +72,7 @@ const ices = [
   },
 ];
 
-const quantity = 1;
+const quantity = 2;
 
 let data = {
   ...products[0],
@@ -70,5 +80,5 @@ let data = {
   sugar: sugars[2],
   quantity,
 };
-console.log(data);
+
 addToCart(data);

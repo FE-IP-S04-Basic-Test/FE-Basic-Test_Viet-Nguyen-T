@@ -29,35 +29,43 @@ const input = [
   ],
 ];
 
-// let arrtest = []
-// for(let i = 0 ; i < input[1].length ; i++) {
-//   arrtest = input[0].filter(item => {
-//     return input[1][i].id === item.id
-//   })
-// }
+const mergeArray = (array1, array2) => {
+  let arrAfter = [];
+  array1.forEach((item) => {
+    let find = array2.find((item2) => {
+      return item.id === item2.id;
+    });
 
-console.log(arrtest);
-let output = [
-  ...input[0],...input[1]
-]
+    if (!find) {
+      array1 = array1.filter((item2) => {
+        return item2.id !== item.id;
+      });
+    }
+  });
+  array2.forEach((item) => {
+    let find = array1.find((item2) => {
+      return item.id === item2.id;
+    });
 
-
-let newArr = []
-for(let i = 0; i < output.length ; i++) {
-  let item = newArr.find((newArrItem) => {
-    return newArrItem.id === output[i].id;
-  })
-  if(item) {
-    item.quantity += output[i].quantity;
-  }else {
-    newArr.push(output[i]);
+    if (!find) {
+      array2 = array2.filter((item2) => {
+        return item2.id !== item.id;
+      });
+    }
+  });
+  arrAfter = [...array1, ...array2];
+  let newArr = [];
+  for (let i = 0; i < arrAfter.length; i++) {
+    let item = newArr.find((newArrItem) => {
+      return newArrItem.id === arrAfter[i].id;
+    });
+    if (item) {
+      item.quantity += arrAfter[i].quantity;
+    } else {
+      newArr.push(arrAfter[i]);
+    }
   }
-}
+  return newArr;
+};
 
-console.log(newArr);
-
-const mergeArray = (array1,array2) => {
-
-}
-
-
+console.log(mergeArray(input[1], input[0]));
