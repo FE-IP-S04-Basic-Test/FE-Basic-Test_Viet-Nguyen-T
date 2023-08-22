@@ -1,0 +1,78 @@
+.chip {
+  padding: 8px 16px;
+  background-color: #f3f3f3;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.chip-sm.disabled,
+.chip.disabled {
+  color: rgba(30, 30, 30, 0.4);
+  background-color: rgba(243, 243, 243, 0.4);
+}
+
+.chip-sm.checked::after,
+.chip.checked::after {
+  content: '\2713';
+  display: inline-block;
+  color: #1e1e1e;
+  padding-left: 6px;
+}
+
+.chip-sm.chip-primary,
+.chip.chip-primary {
+  background-color: #7269ef;
+  color: #fff;
+}
+
+.chip-sm.chip-primary.disabled,
+.chip.chip-primary.disabled {
+  background: rgba(114, 105, 239, 0.4);
+}
+.chip.chip-primary.checked::after {
+  color: #fff;
+}
+
+.chip-sm.chip-outline,
+.chip.chip-outline {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #9ea0a8;
+  color : #000;
+}
+
+.chip-sm.chip-outline.disabled,
+.chip.chip-outline.disabled {
+  color : rgba(30, 30, 30, 0.40);
+}
+
+.chip-sm.chip-outline-primary,
+.chip.chip-outline-primary {
+  background-color: #fff;
+  border-radius: 16px;
+  border: 1px solid #7269EF;
+  color : #7269EF;
+}
+
+.chip-sm.chip-outline.disabled,
+.chip.chip-outline.disabled {
+  color : rgba(30, 30, 30, 0.40);
+}
+
+.chip-sm.chip-outline-primary.checked::after,
+.chip.chip-outline-primary.checked::after {
+  color : #7269EF;
+}
+
+.chip-sm.chip-outline-primary.disabled,
+.chip.chip-outline-primary.disabled {
+  color : rgba(114, 105, 239, 0.40);
+  border: 1px solid rgba(114, 105, 239, 0.40);
+}
+
+.chip-sm {
+  padding: 4px 16px;
+  background-color: #f3f3f3;
+  border-radius: 16px;
+  cursor: pointer;
+}
