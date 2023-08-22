@@ -1,0 +1,19 @@
+.tooltip-right:hover::after{
+  position: absolute;
+  width: max-content;
+  left: calc(100% + 5px);
+  content: "Tooltip Text";
+  color : #fff;
+  background-color:rgb(5, 5, 132);
+}
+.tool-right:hover::before {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: red;
+  left: 100%;
+}
+
+.tooltip {
+  position: relative;
+}
